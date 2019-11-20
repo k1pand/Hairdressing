@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,27 +10,25 @@ using System.Windows.Forms;
 
 namespace SqlServerTestApp
 {
-    public partial class Form1 : Form
+    public partial class Form5 : Form
     {
-        public Form1()
+        public Form5()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+
+        private void Form5_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form2().Show();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new Form3().Show();
-        }
+
     }
 }
 
