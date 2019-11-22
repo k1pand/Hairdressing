@@ -45,5 +45,10 @@ namespace SqlServerTestApp
         {
             new Form9().Show();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

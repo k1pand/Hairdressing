@@ -28,7 +28,7 @@ namespace SqlServerTestApp
             string query = "select * from Masteri ";
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
-                query += "where Masteri.KodMastera = '" + textBox1.Text + "'";
+                query += "where Masteri.KodMastera= '" + textBox1.Text + "'";
             }
             var list = DBConnectionService.SendQueryToSqlServer(query);
             dataGridView1.Rows.Clear();
