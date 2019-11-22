@@ -144,7 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Form4";
-            this.Text = "Добавление";
+            this.Text = "Добавление новой услуги";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource2)).EndInit();
