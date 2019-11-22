@@ -39,8 +39,8 @@
             this.filialBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.nazvanieFilialaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource1)).BeginInit();
@@ -110,30 +110,33 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(97, 21);
             this.comboBox1.TabIndex = 12;
+            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(131, 71);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(97, 21);
+            this.comboBox2.TabIndex = 14;
+            this.comboBox2.DropDown += new System.EventHandler(this.comboBox3_DropDown);
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(131, 71);
+            this.comboBox3.Location = new System.Drawing.Point(234, 71);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(97, 21);
-            this.comboBox3.TabIndex = 14;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(234, 71);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(97, 21);
-            this.comboBox4.TabIndex = 15;
+            this.comboBox3.TabIndex = 15;
+            this.comboBox3.DropDown += new System.EventHandler(this.comboBox4_DropDown);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(548, 178);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -142,6 +145,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Form4";
             this.Text = "Добавление";
+            this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filialBindingSource1)).EndInit();
@@ -163,7 +167,7 @@
         private System.Windows.Forms.BindingSource filialBindingSource2;
         private System.Windows.Forms.BindingSource nazvanieFilialaBindingSource1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

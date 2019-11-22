@@ -21,10 +21,7 @@ namespace SqlServerTestApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             int? client = null;
-            int? filial = null;
             int? master = null;
             int? strizhka = null;
             DateTime date;
@@ -32,8 +29,8 @@ namespace SqlServerTestApp
             try
             {
                 client = Convert.ToInt32((comboBox1.SelectedItem as IdentityItem)?.Id);
-                master = Convert.ToInt32((comboBox3.SelectedItem as IdentityItem)?.Id);
-                strizhka = Convert.ToInt32((comboBox4.SelectedItem as IdentityItem)?.Id);
+                master = Convert.ToInt32((comboBox2.SelectedItem as IdentityItem)?.Id);
+                strizhka = Convert.ToInt32((comboBox3.SelectedItem as IdentityItem)?.Id);
                 date = dateTimePicker1.Value;
             }
 
@@ -60,6 +57,42 @@ namespace SqlServerTestApp
                 Id = id;
                 Name = name;
             }
+
+            public override string ToString()
+            {
+                return Name;
+            }
+        }
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            string query = "select Client.KodClienta, Client.Familia from Client";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(list);
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_DropDown(object sender, EventArgs e)
+        {
+
+            string query = "select Masteri.KodMastera, Masteri.Familia from Masteri";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(list);
+        }
+
+        private void comboBox4_DropDown(object sender, EventArgs e)
+        {
+
+            string query = "select Strizhka.KodStrizhki, Strizhka.Nazvanie from Strizhka";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(list);
         }
     }
 }

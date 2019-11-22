@@ -31,9 +31,19 @@ namespace SqlServerTestApp
             new Form6().Show();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+            new Form7().Show();
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new Form8().Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new Form9().Show();
         }
     }
 }
