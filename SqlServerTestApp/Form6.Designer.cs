@@ -29,65 +29,57 @@
         private void InitializeComponent()
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.Показать = new System.Windows.Forms.Button();
-            this.От = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(67, 74);
+            this.dateTimePicker1.Location = new System.Drawing.Point(34, 27);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // button1
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(365, 74);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 1;
+            this.button1.Location = new System.Drawing.Point(34, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 32);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Показать";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Показать
+            // dataGridView1
             // 
-            this.Показать.Location = new System.Drawing.Point(469, 113);
-            this.Показать.Name = "Показать";
-            this.Показать.Size = new System.Drawing.Size(96, 34);
-            this.Показать.TabIndex = 2;
-            this.Показать.Text = "Показать";
-            this.Показать.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 91);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(724, 347);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // От
+            // textBox1
             // 
-            this.От.AutoSize = true;
-            this.От.Location = new System.Drawing.Point(64, 58);
-            this.От.Name = "От";
-            this.От.Size = new System.Drawing.Size(20, 13);
-            this.От.TabIndex = 3;
-            this.От.Text = "От";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "До";
+            this.textBox1.Location = new System.Drawing.Point(134, 60);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 198);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.От);
-            this.Controls.Add(this.Показать);
-            this.Controls.Add(this.dateTimePicker2);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Form6";
             this.Text = "Form6";
+            this.Load += new System.EventHandler(this.Form6_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,9 +88,8 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button Показать;
-        private System.Windows.Forms.Label От;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
