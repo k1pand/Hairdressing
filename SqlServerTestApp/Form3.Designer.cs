@@ -36,70 +36,74 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(198, 78);
+            this.button1.Location = new System.Drawing.Point(152, 75);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 55);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Выполненная работа (Услуга)";
+            this.button1.Text = "Услуга (Добавление)";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(198, 139);
+            this.button2.Location = new System.Drawing.Point(152, 136);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 55);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Услуги предоставленные мастером (Мастеры)";
+            this.button2.Text = "Мастера";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(198, 200);
+            this.button3.Location = new System.Drawing.Point(152, 197);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 55);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Количество клиентов за время (Клиенты)";
+            this.button3.Text = "Клиенты";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 62);
+            this.label1.Location = new System.Drawing.Point(149, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.Size = new System.Drawing.Size(105, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Показать таблицы";
+            this.label1.Text = "Показать таблицы:";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(198, 261);
+            this.button4.Location = new System.Drawing.Point(152, 258);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 55);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Работа филиалов (Филиалы)";
+            this.button4.Text = "Филиалы";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(198, 322);
+            this.button5.Location = new System.Drawing.Point(152, 319);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 55);
             this.button5.TabIndex = 6;
-            this.button5.Text = "Виды стрижек (Стрижки)";
+            this.button5.Text = "Стрижки";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(433, 173);
+            this.button6.Location = new System.Drawing.Point(425, 75);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(140, 55);
             this.button6.TabIndex = 7;
@@ -110,17 +114,57 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(430, 157);
+            this.label2.Location = new System.Drawing.Point(422, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "В разработке";
+            this.label2.Text = "В разработке:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(422, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(214, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Какой филиал работает больше/меньше";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(422, 194);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(225, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Сколько клиентов пришло сегодня/вчера..";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(422, 234);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Найти дешевые/дорогие стрижки";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(422, 269);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Удаление услуги";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -147,5 +191,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

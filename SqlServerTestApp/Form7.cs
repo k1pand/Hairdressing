@@ -18,18 +18,7 @@ namespace SqlServerTestApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "select * from Filial ";
-            if (!string.IsNullOrEmpty(textBox1.Text))
-            {
-                query += "where Filial.KodFiliala= '" + textBox1.Text + "'";
-            }
-            var list = DBConnectionService.SendQueryToSqlServer(query);
-            dataGridView1.Rows.Clear();
-            foreach (var l in list)
-            {
-                dataGridView1.Rows.Add(l[0], l[1], l[2], l[3]);
-            }
-            dataGridView1.Refresh();
+
         }
 
         private void Form7_Load(object sender, EventArgs e)
@@ -38,6 +27,16 @@ namespace SqlServerTestApp
             dataGridView1.Columns.Add("Название", "Название");
             dataGridView1.Columns.Add("Адрес", "Адрес");
             dataGridView1.Columns.Add("Телефон", "Телефон");
+
+            string query = "select * from Filial ";
+
+            var list = DBConnectionService.SendQueryToSqlServer(query);
+            dataGridView1.Rows.Clear();
+            foreach (var l in list)
+            {
+                dataGridView1.Rows.Add(l[0], l[1], l[2], l[3]);
+            }
+            dataGridView1.Refresh();
         }
     }
 }
