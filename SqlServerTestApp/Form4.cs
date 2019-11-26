@@ -74,7 +74,11 @@ namespace SqlServerTestApp
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.Columns.Add("№ услуги", "№ услуги");
+            dataGridView1.Columns.Add("№ клиента", "№ клиента");
+            dataGridView1.Columns.Add("№ мастера", "№ мастера");
+            dataGridView1.Columns.Add("№ стрижки", "№ стрижки");
+            dataGridView1.Columns.Add("Дата", "Дата");
         }
 
         private void comboBox3_DropDown(object sender, EventArgs e)
@@ -93,6 +97,19 @@ namespace SqlServerTestApp
             var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
             comboBox3.Items.Clear();
             comboBox3.Items.AddRange(list);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string query = "select * from  Usluga";
+
+            var list = DBConnectionService.SendQueryToSqlServer(query);
+            dataGridView1.Rows.Clear();
+            foreach (var l in list)
+            {
+                dataGridView1.Rows.Add(l[0], l[1], l[2], l[3], l[4]);
+            }
+            dataGridView1.Refresh();
         }
     }
 }

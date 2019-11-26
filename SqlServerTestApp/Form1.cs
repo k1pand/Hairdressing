@@ -25,28 +25,6 @@ namespace SqlServerTestApp
         {
             new Form3().Show();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            dataGridView1.Columns.Add("№ услуги", "№ услуги");
-            dataGridView1.Columns.Add("№ клиента", "№ клиента");
-            dataGridView1.Columns.Add("№ мастера", "№ мастера");
-            dataGridView1.Columns.Add("№ стрижки", "№ стрижки");
-            dataGridView1.Columns.Add("Дата", "Дата");
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            string query = "select * from  Usluga";
-
-            var list = DBConnectionService.SendQueryToSqlServer(query);
-            dataGridView1.Rows.Clear();
-            foreach (var l in list)
-            {
-                dataGridView1.Rows.Add(l[0], l[1], l[2], l[3], l[4]);
-            }
-            dataGridView1.Refresh();
-        }
     }
 }
 

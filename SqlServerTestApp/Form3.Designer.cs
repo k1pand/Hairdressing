@@ -48,7 +48,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 55);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Услуга (Добавление)";
+            this.button1.Text = "Услуги";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -77,9 +77,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(149, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Показать таблицы:";
+            this.label1.Text = "Таблицы Баз Данных:";
             // 
             // button4
             // 
@@ -116,9 +116,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(422, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "В разработке:";
+            this.label2.Text = "Задания:";
             // 
             // label3
             // 
@@ -152,9 +152,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(422, 269);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 13);
+            this.label6.Size = new System.Drawing.Size(115, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Удаление услуги";
+            this.label6.Text = "Удаление в таблицах";
             // 
             // Form3
             // 
