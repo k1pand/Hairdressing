@@ -26,7 +26,7 @@ namespace SqlServerTestApp
 
         private static void ParseError(string message)
         {
-            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private static void OpenConnection()

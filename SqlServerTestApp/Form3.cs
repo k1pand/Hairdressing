@@ -48,7 +48,15 @@ namespace SqlServerTestApp
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            /*Select Filial.KodFiliala, count(Usluga.KodMastera) From Usluga, Filial
+Group by Filial.KodFiliala 
 
+
+Select Usluga.KodClienta, count (KodClienta) From Usluga
+WHERE Usluga.Data
+between '2019/11/11' and '2019/11/13'
+Group by KodClienta
+*/
         }
     }
 }

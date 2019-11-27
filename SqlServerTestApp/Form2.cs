@@ -33,7 +33,9 @@ namespace SqlServerTestApp
             {
                 MessageBox.Show("Выполнено!", "Соединение подключено", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                new Form3().Show();
             }
+
         }
         public string GetDBConnectionString(string datasource, string database, string username, string password)
         {
@@ -53,6 +55,10 @@ namespace SqlServerTestApp
             this.Close();
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
