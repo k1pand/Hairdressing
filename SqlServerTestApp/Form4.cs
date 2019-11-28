@@ -36,7 +36,7 @@ namespace SqlServerTestApp
 
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exc.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string query = "insert into Usluga (KodClienta, KodMastera, KodStrizhki, Data) " +
@@ -44,8 +44,7 @@ namespace SqlServerTestApp
             int? result = DBConnectionService.SendCommandToSqlServer(query);
             if (result != null && result > 0)
             {
-                MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Выполнено", "Объект сохранен", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public class IdentityItem
@@ -81,18 +80,16 @@ namespace SqlServerTestApp
             dataGridView1.Columns.Add("Дата", "Дата");
         }
 
-        private void comboBox3_DropDown(object sender, EventArgs e)
+        private void comboBox2_DropDown(object sender, EventArgs e)
         {
-
             string query = "select Masteri.KodMastera, Masteri.Familia from Masteri";
             var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
             comboBox2.Items.Clear();
             comboBox2.Items.AddRange(list);
         }
 
-        private void comboBox4_DropDown(object sender, EventArgs e)
+        private void comboBox3_DropDown(object sender, EventArgs e)
         {
-
             string query = "select Strizhka.KodStrizhki, Strizhka.Nazvanie from Strizhka";
             var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
             comboBox3.Items.Clear();
@@ -110,6 +107,34 @@ namespace SqlServerTestApp
                 dataGridView1.Rows.Add(l[0], l[1], l[2], l[3], l[4]);
             }
             dataGridView1.Refresh();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Не выбраны строки для удаления.");
+            }
+            // this overcomes the out of bound error message 
+            // if the selectedRow is greater than 0 then exectute the code below. 
+            if (dataGridView1.CurrentCell.RowIndex > 0)
+            {
+                int selectedIndex = dataGridView1.SelectedRows[0].Index;
+                // gets the RowID from the first column in the grid 
+                int rowID = Convert.ToInt32(dataGridView1[0, selectedIndex].Value);
+
+                // Prepare the command text with the parameter placeholder 
+                string sql = "DELETE FROM Usluga WHERE KodUslugi = " + rowID;
+
+                // Add the parameter to the command collection 
+                int? result = DBConnectionService.SendCommandToSqlServer(sql);
+
+                // Remove the row from the grid 
+                if (result != null && result > 0)
+                {
+                    dataGridView1.Rows.RemoveAt(selectedIndex);
+                }
+            }
         }
     }
 }

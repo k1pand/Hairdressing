@@ -70,5 +70,87 @@ namespace SqlServerTestApp
                 }
             }
         }
+        public class IdentityItem
+        {
+            public string Id { get; set; }
+            public string Name { get; set; }
+            public IdentityItem(string id, string name)
+            {
+                Id = id;
+                Name = name;
+            }
+
+            public override string ToString()
+            {
+                return Name;
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int? familia = null;
+            int? imya = null;
+            int? otchestvo = null;
+            int? pol = null;
+            DateTime date;
+
+            try
+            {
+                familia = Convert.ToInt32((comboBox1.SelectedItem as IdentityItem)?.Id);
+                imya = Convert.ToInt32((comboBox2.SelectedItem as IdentityItem)?.Id);
+                otchestvo = Convert.ToInt32((comboBox3.SelectedItem as IdentityItem)?.Id);
+                pol = Convert.ToInt32((comboBox4.SelectedItem as IdentityItem)?.Id);
+                date = dateTimePicker1.Value;
+            }
+
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string query = "insert into Client (Familia, Imya, Otchestvo, Pol, Data) " +
+                "values (" + $"'{familia}','{imya}','{otchestvo}', '{pol}', '{date}'" + ")";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Выполнено", "Запись сохранена", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            string query = "select Client.Familia, Client.Familia from Client";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(list);
+        }
+
+        private void comboBox2_DropDown(object sender, EventArgs e)
+        {
+            string query = "select Client.Imya, Client.Imya from Client";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(list);
+        }
+
+        private void comboBox3_DropDown(object sender, EventArgs e)
+        {
+            string query = "select Client.Otchestvo, Client.Otchestvo from Client";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(list);
+        }
+
+        private void comboBox4_DropDown(object sender, EventArgs e)
+        {
+            string query = "select Client.Pol, Client.Pol from Client";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(s => new IdentityItem(s[0], s[1])).ToArray();
+            comboBox3.Items.Clear();
+            comboBox3.Items.AddRange(list);
+        }
     }
 }

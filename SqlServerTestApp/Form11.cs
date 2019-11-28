@@ -28,7 +28,7 @@ namespace SqlServerTestApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "Select c.Familia + ' '+c.Imya + ' '+c.Otchestvo + '' from (select Usluga.KodClienta as id, count(Usluga.KodClienta) as c From Usluga, [dbo].[Client] WHERE(Usluga.Data between DATEADD(day, -30, GETDATE()) and GETDATE()) and[dbo].[Client].KodClienta = Usluga.KodClienta Group by Usluga.KodClienta) as q, [dbo].[Client] as c where q.id = c.KodClienta ";
+            string query = "Select c.Familia + ' '+c.Imya + ' '+c.Otchestvo + '' from (select Usluga.KodClienta as id, count(Usluga.KodClienta) as c From Usluga, [dbo].[Client] WHERE(Usluga.Data between DATEADD(month, -1, GETDATE()) and GETDATE()) and[dbo].[Client].KodClienta = Usluga.KodClienta Group by Usluga.KodClienta) as q, [dbo].[Client] as c where q.id = c.KodClienta ";
 
             var list = DBConnectionService.SendQueryToSqlServer(query);
             dataGridView1.Rows.Clear();
@@ -41,7 +41,7 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = "Select c.Familia + ' '+c.Imya + ' '+c.Otchestvo + '' from (select Usluga.KodClienta as id, count(Usluga.KodClienta) as c From Usluga, [dbo].[Client] WHERE(Usluga.Data between DATEADD(day, -7, GETDATE()) and GETDATE()) and[dbo].[Client].KodClienta = Usluga.KodClienta Group by Usluga.KodClienta) as q, [dbo].[Client] as c where q.id = c.KodClienta ";
+            string query = "Select c.Familia + ' '+c.Imya + ' '+c.Otchestvo + '' from (select Usluga.KodClienta as id, count(Usluga.KodClienta) as c From Usluga, [dbo].[Client] WHERE(Usluga.Data between DATEADD(week, -1, GETDATE()) and GETDATE()) and[dbo].[Client].KodClienta = Usluga.KodClienta Group by Usluga.KodClienta) as q, [dbo].[Client] as c where q.id = c.KodClienta ";
 
             var list = DBConnectionService.SendQueryToSqlServer(query);
             dataGridView1.Rows.Clear();

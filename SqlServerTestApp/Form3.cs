@@ -18,7 +18,17 @@ namespace SqlServerTestApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            DialogResult result = MessageBox.Show(
+                "Услуга предоставляется новому клиенту?",
+                "Сообщение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+
+            if (result == DialogResult.Yes)
+                new Form6().Show();
+            else new Form4().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

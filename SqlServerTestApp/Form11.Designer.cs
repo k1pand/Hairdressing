@@ -38,9 +38,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(47, 366);
+            this.button1.Location = new System.Drawing.Point(22, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 39);
+            this.button1.Size = new System.Drawing.Size(95, 37);
             this.button1.TabIndex = 0;
             this.button1.Text = "За месяц";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,17 +49,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 53);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(616, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(196, 478);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(148, 366);
+            this.button2.Location = new System.Drawing.Point(123, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 39);
+            this.button2.Size = new System.Drawing.Size(95, 37);
             this.button2.TabIndex = 2;
             this.button2.Text = "За неделю";
             this.button2.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(249, 366);
+            this.button3.Location = new System.Drawing.Point(22, 57);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 39);
+            this.button3.Size = new System.Drawing.Size(95, 37);
             this.button3.TabIndex = 3;
             this.button3.Text = "Вчера";
             this.button3.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(350, 366);
+            this.button4.Location = new System.Drawing.Point(123, 57);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 39);
+            this.button4.Size = new System.Drawing.Size(95, 37);
             this.button4.TabIndex = 4;
             this.button4.Text = "Сегодня";
             this.button4.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(249, 621);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
