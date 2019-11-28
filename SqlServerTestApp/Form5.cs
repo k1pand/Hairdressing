@@ -42,6 +42,11 @@ namespace SqlServerTestApp
                 dataGridView1.Columns.Add("Отчество", "Отчество");
                 dataGridView1.Columns.Add("Телефон", "Телефон");
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

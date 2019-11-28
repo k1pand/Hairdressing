@@ -21,9 +21,14 @@ namespace SqlServerTestApp
             new Form2().Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new Form12().Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

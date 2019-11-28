@@ -39,8 +39,8 @@ namespace SqlServerTestApp
                 MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string query = "insert into Usluga (KodClienta, KodMastera, KodStrizhki, Data)" +
-                "values (" + $"'{client}','{master}','{strizhka}', '{date}'" + ");";
+            string query = "insert into Usluga (KodClienta, KodMastera, KodStrizhki, Data) " +
+                "values (" + $"'{client}','{master}','{strizhka}', '{date}'" + ")";
             int? result = DBConnectionService.SendCommandToSqlServer(query);
             if (result != null && result > 0)
             {
